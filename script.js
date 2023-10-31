@@ -5,11 +5,40 @@ const lightbox = document.querySelector(".lightbox");
 const downloadImgBtn = lightbox.querySelector(".uil-import");
 const closeImgBtn = lightbox.querySelector(".close-icon");
 
+
 // API key, paginations, searchTerm variables
 const apiKey = "wA4K6dF9VT3quHeF1FlllVfw4bD2nPoP1wKXSohVYbiw5L8jkfrUZWaB";
 const perPage = 15;
 let currentPage = 1;
 let searchTerm = null;
+let searchHistory = [];
+
+// Fungsi untuk menambahkan pencarian ke riwayat
+// Fungsi untuk menambahkan pencarian ke riwayat di awal array
+const addToSearchHistory = (searchTerm) => {
+    if (searchTerm && !searchHistory.includes(searchTerm)) {
+        searchHistory.unshift(searchTerm); // Menambahkan item baru di awal array
+    }
+};
+
+
+// Fungsi untuk mengupdate tampilan riwayat pencarian
+const updateSearchHistoryUI = () => {
+    const historyList = document.querySelector(".history-list");
+    historyList.innerHTML = "History"; // Reset daftar riwayat
+
+    searchHistory.forEach((term) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = term;
+        listItem.addEventListener("click", () => {
+            searchInput.value = term;
+            loadSearchImages({ key: "Enter", target: { value: term } });
+        });
+        historyList.appendChild(listItem);
+    });
+};
+
+
 
 const downloadImg = (imgUrl) => {
     // Converting received img to blob, creating its download link, & downloading it
@@ -91,11 +120,21 @@ const loadSearchImages = (e) => {
         searchTerm = e.target.value;
         imageWrapper.innerHTML = "";
         getImages(`https://api.pexels.com/v1/search?query=${searchTerm}&page=1&per_page=${perPage}`);
+        addToSearchHistory(searchTerm);
+
+        // Memanggil fungsi untuk mengupdate tampilan riwayat pencarian awal
+        updateSearchHistoryUI();
+
     }
 }
+
+
 
 getImages(`https://api.pexels.com/v1/curated?page=${currentPage}&per_page=${perPage}`);
 loadMoreBtn.addEventListener("click", loadMoreImages);
 searchInput.addEventListener("keyup", loadSearchImages);
 closeImgBtn.addEventListener("click", hideLightbox);
 downloadImgBtn.addEventListener("click", (e) => downloadImg(e.target.dataset.img));
+document.addEventListener("DOMContentLoaded", function() {
+    // Tempatkan seluruh kode JavaScript Anda di sini
+});

@@ -12,6 +12,7 @@
   position: relative;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .search::before, .search img, .lightbox {
   left: 0;
@@ -27,6 +28,8 @@
 }
 .search img {
   object-fit: cover;
+  width: 100%; /* Tambahkan lebar 100% untuk mengisi seluruh lebar elemen .search */
+  height: 100%;
 }
 .search .content {
   z-index: 2;
@@ -34,6 +37,7 @@
   padding: 0 13px;
   text-align: center;
   position: relative;
+  margin-top: 10px;
 }
 .search h1 {
   font-size: 2.65rem;
@@ -73,15 +77,31 @@
 .search-box input:focus::placeholder {
   color: #bfbfbf;
 }
-#bookmark-button {
-  position: absolute;
-  right: -15px;
-  cursor: default;
-  color: black;
-  font-size: 24px;
-  top: 62%;
-  transform: translateY(10%);Sesuaikan nilai ini untuk mengatur jarak horizontal antara ikon dan search box */
+.list{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 1px;
+  position: relative;
 }
+
+.bookmark-container {
+  font-size: 1rem;
+  width: 15%;
+  text-align: center;
+  margin-top: -50px;
+  
+}
+.history-container {
+  font-size: 1rem;
+  width: 20%;
+  text-align: center;
+  margin-top: -50px;
+  
+}
+
+
 .gallery {
   display: flex;
   flex-direction: column;
@@ -266,10 +286,17 @@ header .buttons i:last-child:hover {
     height: 50px;
     margin: 30px 0;
   }
-  #bookmark-button {
-    font-size: 24px; /* Misalnya, mengubah ukuran ikon */
-    top: 60%;
+  .bookmark-container {
+    font-size: 1rem;
+    width: 15%;
+    text-align: center;
   }
+  .history-container {
+    font-size: 1rem;
+    width: 20%;
+    text-align: center;
+  }
+
   .gallery .images {
     max-width: 100%;
     padding: 0 13px;
