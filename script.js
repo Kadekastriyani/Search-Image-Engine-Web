@@ -165,12 +165,16 @@ const generateHTML = (images) => {
     ).join("")
     const bookmarkButtons = document.querySelectorAll('.uil-bookmark');
     bookmarkButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const imgSrc = e.target.parentElement.parentElement.parentElement.querySelector('img').src;
-            const photographer = e.target.parentElement.parentElement.querySelector('.photographer span').textContent;
-            addToBookmark(photographer, imgSrc);
+        bookmarkButtons.forEach(button => {
+            button.addEventListener('click', handleBookmarkClick);
         });
     });
+}
+
+const handleBookmarkClick = (e) => {
+    const imgSrc = e.target.parentElement.parentElement.parentElement.querySelector('img').src;
+    const photographer = e.target.parentElement.parentElement.querySelector('.photographer span').textContent;
+    addToBookmark(photographer, imgSrc);
 }
 
 const getImages = (apiURL) => {
