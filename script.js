@@ -13,13 +13,68 @@ const perPage = 15;
 let currentPage = 1;
 let searchTerm = null;
 let searchHistory = [];
+const bookmarkImages = [];
 
-// Fungsi untuk menambahkan riwayat pencarian
+// Perbarui tampilan Bookmark dan event listener setelah menambahkan gambar ke bookmark
+const addToBookmark = (photographer, imgSrc) => {
+    // Tambahkan gambar ke daftar Bookmark
+    bookmarkImages.push({ photographer, imgSrc });
+    // Tampilkan gambar yang ditambahkan ke Bookmark
+    const bookmarkList = document.querySelector(".bookmark-list");
+    bookmarkList.innerHTML = bookmarkImages.map((img, index) =>
+        `<li>
+            <img src="${img.imgSrc}" alt="bookmarked-img">
+            <span>${img.photographer}</span>
+            <button class="remove-bookmark" data-index="${index}">Remove</button>
+        </li>`
+    ).join("");
+    // Tambahkan event listener untuk menghapus gambar dari bookmark
+    const removeBookmarkButtons = document.querySelectorAll('.remove-bookmark');
+    removeBookmarkButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const index = parseInt(e.target.getAttribute("data-index"));
+            removeFromBookmark(index);
+        });
+    });
+}
+
+// Fungsi untuk menghapus gambar dari Bookmark berdasarkan indeks
+const removeFromBookmark = (index) => {
+    bookmarkImages.splice(index, 1);
+    // Perbarui tampilan Bookmark
+    const bookmarkList = document.querySelector(".bookmark-list");
+    bookmarkList.innerHTML = bookmarkImages.map((img, index) =>
+        `<li>
+            <img src="${img.imgSrc}" alt="bookmarked-img">
+            <span>${img.photographer}</span>
+            <button class="remove-bookmark" data-index="${index}">Remove</button>
+        </li>`
+    ).join("");
+    // Tambahkan event listener untuk menghapus gambar dari bookmark
+    const removeBookmarkButtons = document.querySelectorAll('.remove-bookmark');
+    removeBookmarkButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const index = parseInt(e.target.getAttribute("data-index"));
+            removeFromBookmark(index);
+        });
+    });
+}
+// Tambahkan event listener untuk menghapus gambar dari bookmark
+const removeBookmarkButtons = document.querySelectorAll('.remove-bookmark');
+removeBookmarkButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        const index = parseInt(e.target.getAttribute("data-index"));
+        removeFromBookmark(index);
+    });
+});
+
+// Fungsi untuk menambahkan pencarian ke riwayat di awal array
 const addToSearchHistory = (searchTerm) => {
-    if (!searchHistory.includes(searchTerm)) {
-        searchHistory.push(searchTerm);
+    if (searchTerm && !searchHistory.includes(searchTerm)) {
+        searchHistory.unshift(searchTerm); // Menambahkan item baru di awal array
     }
 };
+
 
 // Fungsi untuk menampilkan riwayat pencarian
 const updateSearchHistoryUI = () => {
@@ -42,7 +97,6 @@ const updateSearchHistoryUI = () => {
     });
 };
 
-
 // Fungsi untuk menghapus riwayat pencarian berdasarkan indeks
 const deleteSearchHistory = (index) => {
     searchHistory.splice(index, 1);
@@ -64,7 +118,7 @@ clearHistoryBtn.addEventListener("click", () => {
 });
 
 const downloadImg = (imgUrl) => {
-    // Converting received img to blob, creating its download link, & downloading it
+    //Mengkonversi gambar yang diterima menjadi blob, membuat tautan untuk mendownload dan mendownload gambar
     fetch(imgUrl).then(res => res.blob()).then(blob => {
         const a = document.createElement("a");
         a.href = URL.createObjectURL(blob);
@@ -74,7 +128,7 @@ const downloadImg = (imgUrl) => {
 }
 
 const showLightbox = (name, img) => {
-    // Showing lightbox and setting img source, name and button attribute
+    // Menampilkan lightbox dan mengatur sumber img, nama dan atribut tombol
     lightbox.querySelector("img").src = img;
     lightbox.querySelector("span").innerText = name;
     downloadImgBtn.setAttribute("data-img", img);
@@ -83,36 +137,44 @@ const showLightbox = (name, img) => {
 }
 
 const hideLightbox = () => {
-    // Hiding lightbox on close icon click
+    // Menyembunyikan lightbox saat ikon tutup diklik
     lightbox.classList.remove("show");
     document.body.style.overflow = "auto";
 }
 
 const generateHTML = (images) => {
-    // Making li of all fetched images and adding them to the existing image wrapper
+    // Membuat li dari semua gambar yang diambil dan menambahkannya ke pembungkus gambar yang ada
     imageWrapper.innerHTML += images.map(img =>
         `<li class="card">
-            <img onclick="showLightbox('${img.photographer}', '${img.src.large2x}')" src="${img.src.large2x}" alt="img">
-            <div class="details">
-                <div class="photographer">
-                    <i class="uil uil-camera"></i>
-                    <span>${img.photographer}</span>
-                </div>
-                <div class="button">
-                    <button onclick="downloadImg('${img.src.large2x}');">
-                        <i class="uil uil-import"></i>
-                    </button>
-                    <button onclick="addbookmarkImg('${img.src.large2x}');">
-                        <i class="uil uil-bookmark"></i>
-                    </button>
-                </div>
+        <img onclick="showLightbox('${img.photographer}', '${img.src.large2x}')" src="${img.src.large2x}" alt="img">
+        <div class="details">
+            <div class="photographer">
+                <i class="uil uil-camera"></i>
+                <span>${img.photographer}</span>
             </div>
-        </li>`
-    ).join("");
+            <div class="button">
+                <button onclick="downloadImg('${img.src.large2x}');">
+                    <i class="uil uil-import"></i>
+                </button>
+                <button onclick="addToBookmark('${img.photographer}', '${img.src.large2x}');">
+                    <i class="uil uil-bookmark"></i>
+                </button>
+            </div>
+        </div>
+    </li>`
+    ).join("")
+    const bookmarkButtons = document.querySelectorAll('.uil-bookmark');
+    bookmarkButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const imgSrc = e.target.parentElement.parentElement.parentElement.querySelector('img').src;
+            const photographer = e.target.parentElement.parentElement.querySelector('.photographer span').textContent;
+            addToBookmark(photographer, imgSrc);
+        });
+    });
 }
 
 const getImages = (apiURL) => {
-    // Fetching images by API call with authorization header
+    // Mengambil gambar melalui panggilan API dengan header otorisasi
     searchInput.blur();
     loadMoreBtn.innerText = "Loading...";
     loadMoreBtn.classList.add("disabled");
@@ -126,32 +188,27 @@ const getImages = (apiURL) => {
 }
 
 const loadMoreImages = () => {
-    currentPage++; // Increment currentPage by 1
-    // If searchTerm has some value then call API with search term else call default API
+    currentPage++; // Menambah Halaman saat ini sebesar 1
+    // Jika SearchTerm mempunyai nilai tertentu maka panggil API dengan istilah pencarian jika tidak, panggil API default
     let apiUrl = `https://api.pexels.com/v1/curated?page=${currentPage}&per_page=${perPage}`;
     apiUrl = searchTerm ? `https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}` : apiUrl;
     getImages(apiUrl);
 }
 
-
 const loadSearchImages = (e) => {
-    // If the search input is empty, set the search term to null and return from here
+    // Jika input pencarian kosong, setel istilah pencarian ke null dan kembali dari sini
     if (e.target.value === "") return searchTerm = null;
-    // If pressed key is Enter, update the current page, search term & call the getImages
+    // Jika tombol yang ditekan adalah Enter, perbarui halaman saat ini, istilah pencarian & panggil getImages
     if (e.key === "Enter") {
         currentPage = 1;
         searchTerm = e.target.value;
         imageWrapper.innerHTML = "";
         getImages(`https://api.pexels.com/v1/search?query=${searchTerm}&page=1&per_page=${perPage}`);
         addToSearchHistory(searchTerm);
-
         // Memanggil fungsi untuk mengupdate tampilan riwayat pencarian awal
         updateSearchHistoryUI();
-
     }
 }
-
-
 
 getImages(`https://api.pexels.com/v1/curated?page=${currentPage}&per_page=${perPage}`);
 loadMoreBtn.addEventListener("click", loadMoreImages);
@@ -159,8 +216,6 @@ searchInput.addEventListener("keyup", loadSearchImages);
 closeImgBtn.addEventListener("click", hideLightbox);
 downloadImgBtn.addEventListener("click", (e) => downloadImg(e.target.dataset.img));
 document.addEventListener("DOMContentLoaded", function () {
-    // Tempatkan seluruh kode JavaScript Anda di sini
-
     // Memuat riwayat pencarian dari localStorage saat halaman dimuat
     const savedSearchHistory = localStorage.getItem('searchHistory');
     if (savedSearchHistory) {
