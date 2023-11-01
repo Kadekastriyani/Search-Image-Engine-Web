@@ -7,7 +7,6 @@ const closeImgBtn = lightbox.querySelector(".close-icon");
 const historyList = document.querySelector(".history-list");
 const clearHistoryBtn = document.querySelector(".clear-history");
 
-
 // API key, paginations, searchTerm variables
 const apiKey = "wA4K6dF9VT3quHeF1FlllVfw4bD2nPoP1wKXSohVYbiw5L8jkfrUZWaB";
 const perPage = 15;
@@ -19,50 +18,50 @@ let searchHistory = [];
 const addToSearchHistory = (searchTerm) => {
     if (!searchHistory.includes(searchTerm)) {
         searchHistory.push(searchTerm);
-      }
-  };
-  
-  // Fungsi untuk menampilkan riwayat pencarian
-  const updateSearchHistoryUI = () => {
+    }
+};
+
+// Fungsi untuk menampilkan riwayat pencarian
+const updateSearchHistoryUI = () => {
     historyList.innerHTML = searchHistory.map((search, index) =>
-    `<li>
+        `<li>
       <span class="search-history-item" data-index="${index}">${search}</span>
       <button class="delete-history" data-index="${index}">Delete</button>
     </li>`
-  ).join("");
+    ).join("");
 
-  // Tambahkan event listener untuk melakukan pencarian ketika riwayat pencarian diklik
-  const searchHistoryItems = document.querySelectorAll('.search-history-item');
-  searchHistoryItems.forEach(item => {
-    item.addEventListener('click', (e) => {
-      const index = e.target.getAttribute("data-index");
-      const selectedSearch = searchHistory[index];
-      searchInput.value = selectedSearch;
-      loadSearchImages({ key: "Enter", target: searchInput }); // Panggil fungsi loadSearchImages dengan key "Enter"
+    // Tambahkan event listener untuk melakukan pencarian ketika riwayat pencarian diklik
+    const searchHistoryItems = document.querySelectorAll('.search-history-item');
+    searchHistoryItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const index = e.target.getAttribute("data-index");
+            const selectedSearch = searchHistory[index];
+            searchInput.value = selectedSearch;
+            loadSearchImages({ key: "Enter", target: searchInput }); // Panggil fungsi loadSearchImages dengan key "Enter"
+        });
     });
-  });
 };
 
-  
-  // Fungsi untuk menghapus riwayat pencarian berdasarkan indeks
-  const deleteSearchHistory = (index) => {
+
+// Fungsi untuk menghapus riwayat pencarian berdasarkan indeks
+const deleteSearchHistory = (index) => {
     searchHistory.splice(index, 1);
     updateSearchHistoryUI();
-  };
-  
-  // Tambahkan event listener untuk menghapus riwayat pencarian
-  historyList.addEventListener("click", (e) => {
+};
+
+// Tambahkan event listener untuk menghapus riwayat pencarian
+historyList.addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-history")) {
-      const index = parseInt(e.target.getAttribute("data-index"));
-      deleteSearchHistory(index);
+        const index = parseInt(e.target.getAttribute("data-index"));
+        deleteSearchHistory(index);
     }
-  });
-  
-  // Tambahkan event listener untuk membersihkan semua riwayat pencarian
-  clearHistoryBtn.addEventListener("click", () => {
+});
+
+// Tambahkan event listener untuk membersihkan semua riwayat pencarian
+clearHistoryBtn.addEventListener("click", () => {
     searchHistory = [];
     updateSearchHistoryUI();
-  });
+});
 
 const downloadImg = (imgUrl) => {
     // Converting received img to blob, creating its download link, & downloading it
@@ -159,7 +158,7 @@ loadMoreBtn.addEventListener("click", loadMoreImages);
 searchInput.addEventListener("keyup", loadSearchImages);
 closeImgBtn.addEventListener("click", hideLightbox);
 downloadImgBtn.addEventListener("click", (e) => downloadImg(e.target.dataset.img));
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Tempatkan seluruh kode JavaScript Anda di sini
 
     // Memuat riwayat pencarian dari localStorage saat halaman dimuat
