@@ -12,7 +12,7 @@ SEARCH IMAGE ENGINE`**
     •	Mendownload gambar yang diinginkan.
     •	Menampilkan lightbox untuk melihat gambar ketika gambar diklik dan menyembunyikan dengan mengklik ikon tutup
     •	Memuat lebih banyak gambar dengan mengklik “Load More”. 
-3.	**Pengembangan**
+4.	**Pengembangan**
      a)	 Aplikasi web ini dikembangkan dengan menggunakan:
           -	HTML
           -	CSS
@@ -47,7 +47,7 @@ SEARCH IMAGE ENGINE`**
               o	Menambahkan fitur untuk menambahkan gambar ke bookmark dan menghapusnya jika diinginkan.
 
 
-4.	**Penggunaan**
+5.	**Penggunaan**
     Berikut adalah panduan singkat penggunaan aplikasi **Search Image Engine**:
       a)	Pencarian Gambar:
             o	Pada halaman aplikasi, terdapat kotak pencarian untuk memasukkan kata kunci untuk mencari gambar yang diinginkan.
