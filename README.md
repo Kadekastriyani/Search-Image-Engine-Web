@@ -1,12 +1,8 @@
 # Search-Image-Engine-Web
-## **Nama	: Kadek Astri Yani**
-## **Nim	: D121211035**
-## **PROJECT PEMROGRAMAN WEB**
-## **SEARCH IMAGE ENGINE**
+### **Kadek Astri Yani_D121211035**
 
 ### Pengenalan Aplikasi
-      Project ini dibuat untuk merancang suatu aplikasi web yang berfungsi sebagai mesin pencarian gambar yang memungkinkan pengguna untuk mencari gambar yang diinginkan. Sumber yang digunakan oleh aplikasi ini untuk menyediakan gambar-gambar bersumber dari API https://pixels.com/
-   
+Project ini dibuat untuk merancang suatu aplikasi web yang berfungsi sebagai mesin pencarian gambar yang memungkinkan pengguna untuk mencari gambar yang diinginkan. Sumber yang digunakan oleh aplikasi ini untuk menyediakan gambar-gambar bersumber dari API https://pixels.com/
 ### Fitur
    - Mencari gambar dengan memasukkan kata kunci pada search box dan menekan “Enter”.
    - Menyimpan dan menghapus riwayat pencarian.
@@ -14,7 +10,6 @@
    - Mendownload gambar yang diinginkan.
    - Menampilkan lightbox untuk melihat gambar ketika gambar diklik dan menyembunyikan dengan mengklik ikon tutup.
    - Memuat lebih banyak gambar dengan mengklik “Load More”.
-
 ### Pengembangan
 1. Aplikasi web ini dikembangkan dengan menggunakan:
        - HTML 
@@ -22,7 +17,6 @@
        - JAVA SCRIPT
 2. API yang digunakan
       API dari layanan pihak ketiga yaitu API Pexels (https://pixels.com/) untuk mengambil gambar dari platform tersebut. 
-  	
 3. Progres pengerjaan project
       1) 19 Oktober 2023
          - Pemilihan ide
@@ -49,10 +43,7 @@
          - Mengatur agar history pencarian terbaru berada paling atas.
          - Menambahkan fitur untuk menghapus semua riwayat pencarian (Clear History).
          - enambahkan fitur untuk menambahkan gambar ke bookmark dan menghapusnya jika diinginkan.
-
 ### Penggunaan
-      Berikut adalah panduan singkat penggunaan aplikasi **Search Image Engine**:
-    
 1. Pencarian Gambar:
       - Pada halaman aplikasi, terdapat kotak pencarian untuk memasukkan kata kunci untuk mencari gambar yang diinginkan.
       - Ketik istilah pencarian yang ingin dicari dalam kotak pencarian.  Tekan tombol "Enter" atau klik ikon tombol pencarian setelah memasukkan istilah pencarian.
