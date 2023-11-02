@@ -4,10 +4,10 @@ Nim	: D121211035**
 **`PROJECT PEMROGRAMAN WEB
 SEARCH IMAGE ENGINE`**
 
-##Pengenalan Aplikasi
+## Pengenalan Aplikasi
   	Project ini dibuat untuk merancang suatu aplikasi web yang berfungsi sebagai mesin pencarian gambar yang memungkinkan pengguna untuk mencari gambar yang diinginkan. Sumber yang digunakan oleh aplikasi ini untuk menyediakan gambar-gambar bersumber dari API https://pixels.com/
    
-##Fitur
+## Fitur
    - Mencari gambar dengan memasukkan kata kunci pada search box dan menekan “Enter”.
    - Menyimpan dan menghapus riwayat pencarian.
    - Menambahkan gambar ke bookmark dan menghapusnya.
@@ -15,7 +15,7 @@ SEARCH IMAGE ENGINE`**
    - Menampilkan lightbox untuk melihat gambar ketika gambar diklik dan menyembunyikan dengan mengklik ikon tutup.
    - Memuat lebih banyak gambar dengan mengklik “Load More”.
 
-##Pengembangan
+## Pengembangan
    
      a)	 Aplikasi web ini dikembangkan dengan menggunakan:
           -	HTML
@@ -51,27 +51,28 @@ SEARCH IMAGE ENGINE`**
               o	Menambahkan fitur untuk menghapus semua riwayat pencarian (Clear History).
               o	Menambahkan fitur untuk menambahkan gambar ke bookmark dan menghapusnya jika diinginkan.
 
-##Penggunaan
-    Berikut adalah panduan singkat penggunaan aplikasi **Search Image Engine**:
-      a)	Pencarian Gambar:
+## Penggunaan
+Berikut adalah panduan singkat penggunaan aplikasi **Search Image Engine**:
+    
+      a) Pencarian Gambar:
             - Pada halaman aplikasi, terdapat kotak pencarian untuk memasukkan kata kunci untuk mencari gambar yang diinginkan.
             - Ketik istilah pencarian yang ingin dicari dalam kotak pencarian.  Tekan tombol "Enter" atau klik ikon tombol pencarian setelah memasukkan istilah pencarian.
             - Aplikasi akan memuat gambar-gambar yang sesuai dengan istilah pencarian Anda dari sumber Pexels.
             
-      b)	History:
+      b) History:
             - Aplikasi ini juga mencatat riwayat pencarian yang ditampilkan sebagai daftar.
             - Salah satu istilah pencarian dalam riwayat dapat diklik untuk melakukan pencarian ulang dengan istilah tersebut.
             
-      c)	Menghapus History:
+      c) Menghapus History:
             - Daftar riwayat pencarian dapat dihapus dengan mengklik tombol " Clear History" untuk menghapus semua riwayat pencarian atau mengklik "Delete" di sebelah istilah pencarian yang ingin dihapus.
             
-      d)	Menyimpan Gambar ke Bookmark:
+      d) Menyimpan Gambar ke Bookmark:
             - Ketika ada gambar yang disukai, gambar tersebut dapat di tambahkan ke dalam bookmark dengan mengklik ikon bookmark pada gambar tersebut dan gambar akan ditambahkan ke daftar bookmark di aplikasi.
             - Gambar yang disimpan dapat dilihat pada daftar bookmark dan menghapusnya jika diinginkan.
             
-      e)	Melihat Gambar dalam Lightbox:
+      e) Melihat Gambar dalam Lightbox:
             - Ketika gambar diklik dalam hasil pencarian, gambar akan ditampilkan dalam lightbox.
             - Pada lightbox, terdapat fitur untuk melihat nama gambar, mendownload, menambahkan ke bookmark dan mengklik icon X untuk keluar dari lightbox.
             
-      f)	Memuat Lebih Banyak Gambar:
+      f) Memuat Lebih Banyak Gambar:
             - Pada aplikasi terdapat fitur “Load More” yang dapat diklik untuk melihat lebih banyak gambar.
