@@ -32,11 +32,8 @@ SEARCH IMAGE ENGINE`**
      c)	 Progres pengerjaan project
   	
           •	 19 Oktober 2023
-  	
               o	Pemilihan ide
-  	
               o	Presentasi ide
-  	
           •	23 Oktober 2023
               o	Membuat desain halaman utama dengan menggunakan figma.
           •	25 Oktober 2023
@@ -45,7 +42,7 @@ SEARCH IMAGE ENGINE`**
               o	Mengatur tampilan tata letak galery atau gambar yang muncul pada saat memasukkan kata kunci pada search box.
               o	Menambahkan tampilan fitur Load more untuk menampilkan lebih banyak gambar.
           •	27 Oktober 2023
-              o	Membuat file script.js untuk menambahkan APIkey dan mengatur fitur search box agar bisa dilakukan pencarian dan memuat gambar berdasarkan kata kunci yang dimasukkan oleh                 pengguna. 
+              o	Membuat file script.js untuk menambahkan APIkey dan mengatur fitur search box agar bisa dilakukan pencarian dan memuat gambar berdasarkan kata kunci yang dimasukkan oleh pengguna. 
               o	Mengatur fitur Load More agar dapat memuat lebih banyak gambar.
               o	Menambahkan dan mengatur fitur untuk menampilkan lightbox ketika gambar diklik dan menyembunyikan dengan mengklik ikon tutup.
           •	28 Oktober 2023
@@ -59,7 +56,6 @@ SEARCH IMAGE ENGINE`**
               o	Mengatur agar history pencarian terbaru berada paling atas.
               o	Menambahkan fitur untuk menghapus semua riwayat pencarian (Clear History).
               o	Menambahkan fitur untuk menambahkan gambar ke bookmark dan menghapusnya jika diinginkan.
-
 
 7.	**Penggunaan**
     Berikut adalah panduan singkat penggunaan aplikasi **Search Image Engine**:
