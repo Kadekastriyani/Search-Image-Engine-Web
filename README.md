@@ -30,9 +30,13 @@ SEARCH IMAGE ENGINE`**
          API dari layanan pihak ketiga yaitu API Pexels untuk mengambil gambar dari platform tersebut.
   	
      c)	 Progres pengerjaan project
+  	
           •	 19 Oktober 2023
+  	
               o	Pemilihan ide
+  	
               o	Presentasi ide
+  	
           •	23 Oktober 2023
               o	Membuat desain halaman utama dengan menggunakan figma.
           •	25 Oktober 2023
