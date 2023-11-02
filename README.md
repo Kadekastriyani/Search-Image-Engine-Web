@@ -9,10 +9,15 @@ SEARCH IMAGE ENGINE`**
 3.	**Fitur**
    
     •	Mencari gambar dengan memasukkan kata kunci pada search box dan menekan “Enter”.
+  	
     •	Menyimpan dan menghapus riwayat pencarian.
+  	
     •	Menambahkan gambar ke bookmark dan menghapusnya.
+  	
     •	Mendownload gambar yang diinginkan.
-    •	Menampilkan lightbox untuk melihat gambar ketika gambar diklik dan menyembunyikan dengan mengklik ikon tutup
+  	
+    •	Menampilkan lightbox untuk melihat gambar ketika gambar diklik dan menyembunyikan dengan mengklik ikon tutup.
+  	
     •	Memuat lebih banyak gambar dengan mengklik “Load More”. 
 5.	**Pengembangan**
      a)	 Aplikasi web ini dikembangkan dengan menggunakan:
