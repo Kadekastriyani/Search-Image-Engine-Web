@@ -20,13 +20,17 @@ SEARCH IMAGE ENGINE`**
   	
     •	Memuat lebih banyak gambar dengan mengklik “Load More”. 
 5.	**Pengembangan**
+   
      a)	 Aplikasi web ini dikembangkan dengan menggunakan:
           -	HTML
           -	CSS
           -	JAVA SCRIPT
+  	
      b)	 API yang digunakan
          API dari layanan pihak ketiga yaitu API Pexels untuk mengambil gambar dari platform tersebut.
+  	
      c)	 Progres pengerjaan project
+  	
           •	 19 Oktober 2023
               o	Pemilihan ide
               o	Presentasi ide
@@ -54,7 +58,7 @@ SEARCH IMAGE ENGINE`**
               o	Menambahkan fitur untuk menambahkan gambar ke bookmark dan menghapusnya jika diinginkan.
 
 
-6.	**Penggunaan**
+7.	**Penggunaan**
     Berikut adalah panduan singkat penggunaan aplikasi **Search Image Engine**:
       a)	Pencarian Gambar:
             o	Pada halaman aplikasi, terdapat kotak pencarian untuk memasukkan kata kunci untuk mencari gambar yang diinginkan.
