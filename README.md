@@ -4,15 +4,17 @@ Nim	: D121211035**
 **`PROJECT PEMROGRAMAN WEB
 SEARCH IMAGE ENGINE`**
 1.	**Ide**
-    Project ini dibuat untuk merancang suatu aplikasi web yang berfungsi sebagai mesin pencarian gambar yang memungkinkan pengguna untuk mencari gambar yang diinginkan.
-2.	**Fitur**
+
+  	Project ini dibuat untuk merancang suatu aplikasi web yang berfungsi sebagai mesin pencarian gambar yang memungkinkan pengguna untuk mencari gambar yang diinginkan.
+3.	**Fitur**
+   
     •	Mencari gambar dengan memasukkan kata kunci pada search box dan menekan “Enter”.
     •	Menyimpan dan menghapus riwayat pencarian.
     •	Menambahkan gambar ke bookmark dan menghapusnya.
     •	Mendownload gambar yang diinginkan.
     •	Menampilkan lightbox untuk melihat gambar ketika gambar diklik dan menyembunyikan dengan mengklik ikon tutup
     •	Memuat lebih banyak gambar dengan mengklik “Load More”. 
-4.	**Pengembangan**
+5.	**Pengembangan**
      a)	 Aplikasi web ini dikembangkan dengan menggunakan:
           -	HTML
           -	CSS
@@ -47,7 +49,7 @@ SEARCH IMAGE ENGINE`**
               o	Menambahkan fitur untuk menambahkan gambar ke bookmark dan menghapusnya jika diinginkan.
 
 
-5.	**Penggunaan**
+6.	**Penggunaan**
     Berikut adalah panduan singkat penggunaan aplikasi **Search Image Engine**:
       a)	Pencarian Gambar:
             o	Pada halaman aplikasi, terdapat kotak pencarian untuk memasukkan kata kunci untuk mencari gambar yang diinginkan.
