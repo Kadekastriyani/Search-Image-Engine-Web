@@ -17,14 +17,14 @@ SEARCH IMAGE ENGINE`**
 
 ## Pengembangan
    
-     a)	 Aplikasi web ini dikembangkan dengan menggunakan:
+     1. Aplikasi web ini dikembangkan dengan menggunakan:
           -	HTML
           -	CSS
           -	JAVA SCRIPT
-     b)	 API yang digunakan
+     2. API yang digunakan
          API dari layanan pihak ketiga yaitu API Pexels (https://pixels.com/) untuk mengambil gambar dari platform tersebut. 
   	
-     c)	 Progres pengerjaan project
+     3. Progres pengerjaan project
          - 19 Oktober 2023
               o	Pemilihan ide
               o	Presentasi ide
@@ -54,25 +54,25 @@ SEARCH IMAGE ENGINE`**
 ## Penggunaan
 Berikut adalah panduan singkat penggunaan aplikasi **Search Image Engine**:
     
-      a) Pencarian Gambar:
+      1. Pencarian Gambar:
             - Pada halaman aplikasi, terdapat kotak pencarian untuk memasukkan kata kunci untuk mencari gambar yang diinginkan.
             - Ketik istilah pencarian yang ingin dicari dalam kotak pencarian.  Tekan tombol "Enter" atau klik ikon tombol pencarian setelah memasukkan istilah pencarian.
             - Aplikasi akan memuat gambar-gambar yang sesuai dengan istilah pencarian Anda dari sumber Pexels.
             
-      b) History:
+      2. History:
             - Aplikasi ini juga mencatat riwayat pencarian yang ditampilkan sebagai daftar.
             - Salah satu istilah pencarian dalam riwayat dapat diklik untuk melakukan pencarian ulang dengan istilah tersebut.
             
-      c) Menghapus History:
+      3. Menghapus History:
             - Daftar riwayat pencarian dapat dihapus dengan mengklik tombol " Clear History" untuk menghapus semua riwayat pencarian atau mengklik "Delete" di sebelah istilah pencarian yang ingin dihapus.
             
-      d) Menyimpan Gambar ke Bookmark:
+      4. Menyimpan Gambar ke Bookmark:
             - Ketika ada gambar yang disukai, gambar tersebut dapat di tambahkan ke dalam bookmark dengan mengklik ikon bookmark pada gambar tersebut dan gambar akan ditambahkan ke daftar bookmark di aplikasi.
             - Gambar yang disimpan dapat dilihat pada daftar bookmark dan menghapusnya jika diinginkan.
             
-      e) Melihat Gambar dalam Lightbox:
+      5. Melihat Gambar dalam Lightbox:
             - Ketika gambar diklik dalam hasil pencarian, gambar akan ditampilkan dalam lightbox.
             - Pada lightbox, terdapat fitur untuk melihat nama gambar, mendownload, menambahkan ke bookmark dan mengklik icon X untuk keluar dari lightbox.
             
-      f) Memuat Lebih Banyak Gambar:
+      6. Memuat Lebih Banyak Gambar:
             - Pada aplikasi terdapat fitur “Load More” yang dapat diklik untuk melihat lebih banyak gambar.
