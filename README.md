@@ -1,8 +1,7 @@
 # Search-Image-Engine-Web
 **Nama	: Kadek Astri Yani
 Nim	: D121211035**
-**`PROJECT 
-PEMROGRAMAN WEB
+**`PROJECT PEMROGRAMAN WEB
 SEARCH IMAGE ENGINE`**
 1.	**Ide**
     Project ini dibuat untuk merancang suatu aplikasi web yang berfungsi sebagai mesin pencarian gambar yang memungkinkan pengguna untuk mencari gambar yang diinginkan.
@@ -26,14 +25,13 @@ SEARCH IMAGE ENGINE`**
               o	Presentasi ide
           •	23 Oktober 2023
               o	Membuat desain halaman utama dengan menggunakan figma.
-
           •	25 Oktober 2023
               o	Mengimplementasikan desain halaman utama pada file index.html dan style.css.
               o	Mengatur tampilan background, Search Image Engine, You can search and download for the image you need, dan search box pada halaman utama.
               o	Mengatur tampilan tata letak galery atau gambar yang muncul pada saat memasukkan kata kunci pada search box.
               o	Menambahkan tampilan fitur Load more untuk menampilkan lebih banyak gambar.
           •	27 Oktober 2023
-              o	Membuat file script.js untuk menambahkan APIkey dan mengatur fitur search box agar bisa dilakukan pencarian dan memuat gambar berdasarkan kata kunci yang dimasukkan oleh pengguna. 
+              o	Membuat file script.js untuk menambahkan APIkey dan mengatur fitur search box agar bisa dilakukan pencarian dan memuat gambar berdasarkan kata kunci yang dimasukkan oleh                 pengguna. 
               o	Mengatur fitur Load More agar dapat memuat lebih banyak gambar.
               o	Menambahkan dan mengatur fitur untuk menampilkan lightbox ketika gambar diklik dan menyembunyikan dengan mengklik ikon tutup.
           •	28 Oktober 2023
